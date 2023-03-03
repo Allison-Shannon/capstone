@@ -10,7 +10,7 @@
 
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<title>Sign Up Form by Colorlib</title>
+<title>Login Page</title>
 
 
 
@@ -30,13 +30,13 @@
 
 <body>
 
-
+<input type="hidden" id="status" value = "<%= request.getAttribute("status")%>">
 
 	<div class="main">
 
 
 
-		<!-- Sing in  Form -->
+		<!-- Sign in  Form -->
 
 		<section class="sign-in">
 
@@ -46,11 +46,6 @@
 
 					<div class="signin-image">
 
-						<figure>
-
-							<img src="images/signin-image.jpg" alt="sing up image">
-
-						</figure>
 
 						<a href="registration.jsp" class="signup-image-link">Create an
 
@@ -64,7 +59,7 @@
 
 						<h2 class="form-title">Sign in</h2>
 
-						<form method="" action="" class="register-form"
+						<form method="post" action="login" class="register-form"
 
 							id="login-form">
 
@@ -112,28 +107,7 @@
 
 						</form>
 
-						<div class="social-login">
-
-							<span class="social-label">Or login with</span>
-
-							<ul class="socials">
-
-								<li><a href="#"><i
-
-										class="display-flex-center zmdi zmdi-facebook"></i></a></li>
-
-								<li><a href="#"><i
-
-										class="display-flex-center zmdi zmdi-twitter"></i></a></li>
-
-								<li><a href="#"><i
-
-										class="display-flex-center zmdi zmdi-google"></i></a></li>
-
-							</ul>
-
-						</div>
-
+						
 					</div>
 
 				</div>
@@ -153,6 +127,16 @@
 	<script src="vendor/jquery/jquery.min.js"></script>
 
 	<script src="js/main.js"></script>
+		<script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel= "stylesheet" href = "alert/dist/sweetalert.css">
+
+<script type = "text/javascript">
+	var status = document.getElementById("status").value;
+	if(status == "success"{
+		swal("Sorry","Wrong Username/Password","error")
+		
+	})
+</script>
 
 </body>
 </html>

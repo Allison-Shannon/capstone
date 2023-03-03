@@ -32,8 +32,9 @@ public class RegistrationServlet extends HttpServlet {
 		
 		try {
 			Class.forName("com.sql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/users?useSSL=false", "root","Password");
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/users?useSSL=false", "root","Password");				
 			PreparedStatement pst = con.prepareStatement("insert into users(uname, uemail, upwd, umobile) values()?,?,?,?)");
+
 			pst.setString(1, uname);
 			pst.setString(2, upwd);
 			pst.setString(3, uemail);
@@ -53,7 +54,7 @@ public class RegistrationServlet extends HttpServlet {
 			e.printStackTrace();
 		}finally {
 			try {
-				con.close();
+				if (con != null) { con.close(); }
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
