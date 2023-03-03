@@ -31,9 +31,9 @@ public class RegistrationServlet extends HttpServlet {
 		Connection con = null;
 		
 		try {
-			Class.forName("com.sql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/users?useSSL=false", "root","Password");				
-			PreparedStatement pst = con.prepareStatement("insert into users(uname, uemail, upwd, umobile) values()?,?,?,?)");
+			PreparedStatement pst = con.prepareStatement("insert into users(uname,upwd,uemail,umobile) values(?,?,?,?)");
 
 			pst.setString(1, uname);
 			pst.setString(2, upwd);

@@ -10,7 +10,7 @@
 
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<title>Sign Up Form by Colorlib</title>
+<title>Sign Up Form</title>
 
 
 
