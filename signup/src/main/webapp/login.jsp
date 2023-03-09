@@ -69,9 +69,9 @@
 
 									class="zmdi zmdi-account material-icons-name"></i></label> <input
 
-									type="text" name="username" id="username"
+									type="text" name="username" id="uname"
 
-									placeholder="Your Name" />
+									placeholder="Username" />
 
 							</div>
 

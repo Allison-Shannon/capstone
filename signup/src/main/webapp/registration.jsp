@@ -159,12 +159,10 @@
 
 <script type = "text/javascript">
 	var status = document.getElementById("status").value;
-	if(status == "success"{
+	if(status == "success"){
 		swal("Account Created Successfully", "success")
 	})
 </script>
-
-
 
 
 
