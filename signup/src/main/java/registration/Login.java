@@ -29,7 +29,7 @@ public class Login extends HttpServlet {
 		 
 		 try {
 			 Class.forName("com.mysql.cj.jdbc.Driver");
-			 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/users?useSSL=false", "root","Password");
+			 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/users?&useSSL=false&allowPublicKeyRetrieval=true", "capstone","capstone");
 			 PreparedStatement pst = con.prepareStatement("select * from users where uemail = ? and upwd = ?");
 			 pst.setString(1, uemail);
 			 pst.setString(2, upwd);

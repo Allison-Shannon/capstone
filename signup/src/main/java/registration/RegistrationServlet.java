@@ -32,13 +32,14 @@ public class RegistrationServlet extends HttpServlet {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/users?useSSL=false", "root","Password");				
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/users?&useSSL=false&allowPublicKeyRetrieval=true", "capstone","capstone");				
 			PreparedStatement pst = con.prepareStatement("insert into users(uname,upwd,uemail,umobile) values(?,?,?,?)");
 
 			pst.setString(1, uname);
 			pst.setString(2, upwd);
 			pst.setString(3, uemail);
 			pst.setString(4, umobile);
+            response.sendRedirect("registration-success.jsp");
 			
 			int rowCount = pst.executeUpdate();
 			dispatcher = request.getRequestDispatcher("registration.jsp");
