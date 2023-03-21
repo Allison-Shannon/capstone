@@ -1,0 +1,11 @@
+**Using Tomcat v9.0**
+
+Run the provided DDL file on a MYSQL Server running on port 3306.
+You need to create a user with all privleges for this database usernamed "capstone" with password "capstone"
+
+1. Create a folder under webapps in your Tomcat v9.0 directory
+2. place capstone.war in the created folder
+3. extract the .war file. You can open a terminal and execute "jar -xvf .\capstone.war" (Make sure the terminal is currently in the created folder directory)
+4. Open your browser, and goto http://localhost:8080/FOLDER_NAME/login.jsp
+5. Register your user, and login.
+
